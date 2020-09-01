@@ -2,7 +2,7 @@
 The following are security implications to be
 addressed before using the reference solution as is, because of the nature of the reference platform.
 
-## Linux* OS (OpenSSL* toolkit as the cryptography library)
+## Linux* OS (OpenSSL* Toolkit as the Cryptography Library)
 1. The random number needs to be seeded with an entropy source.
    Affected file(s):
    - `hal/tls/openssl_cryptoSupport.c`
@@ -21,7 +21,7 @@ addressed before using the reference solution as is, because of the nature of th
    Affected file(s): <br>
    - `base.mk`
 
-## NUCLEO-F429ZI board: Arm Cortex* -M4/Arm Mbed* OS (mbedTLS as the cryptography library)
+## NUCLEO-F429ZI Board: Arm Cortex* -M4/Arm Mbed* OS (mbedTLS as the Cryptography Library)
 1. The mbedTLS library must use the True Random Number Generator (TRNG) hardware for
    the entropy source. Refer to
    [mbedTLS Hardware Entropy Source](#mbedtls_entropy) for more information.
@@ -46,7 +46,7 @@ addressed before using the reference solution as is, because of the nature of th
    MBEDTLS_SSL_EXTENDED_MASTER_SECRET
    ```
 
-## NUCLEO-F767ZI board: Arm Cortex-M7/Arm Mbed OS (mbedTLS as the cryptography library)
+## NUCLEO-F767ZI Board: Arm Cortex-M7/Arm Mbed OS (mbedTLS as the Cryptography Library)
 1. The mbedTLS library must use the TRNG hardware for
    the entropy source. Refer to
    [mbedTLS Hardware Entropy Source](#mbedtls_entropy) for more information.
@@ -72,7 +72,7 @@ addressed before using the reference solution as is, because of the nature of th
    MBEDTLS_SSL_EXTENDED_MASTER_SECRET
    ```
 
-## WaRP7 board: Arm Cortex-A7/Linux OS (mbedTLS as the cryptography library)
+## WaRP7 Board: Arm Cortex-A7/Linux OS (mbedTLS as the Cryptography Library)
 1. The mbedTLS library must use the True Random Number Generator (TRNG) hardware for
    the entropy source. Refer to
    [mbedTLS Hardware Entropy Source](#mbedtls_entropy) for more information.
@@ -91,7 +91,7 @@ addressed before using the reference solution as is, because of the nature of th
    Affected file(s): <br>
    - `base.mk`
 
-3.  SDO data must be protected by appropriate file system permissions as a defense
+3. SDO data must be protected by appropriate file system permissions as a defense
    in depth. Read/write permissions must be provided only to the user running the
    SDO application. The list of files is as follows:
    - data/Normal.blob: The integrity of this file is protected using
